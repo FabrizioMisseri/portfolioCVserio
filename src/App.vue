@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-  <JumboTron id="jumbo" class="py-5 mt-5"></JumboTron>
+  <JumboTron id="jumbo" class="mt-5"></JumboTron>
   <AboutMe id="about" class="py-5 mt-5"></AboutMe>
   <Skills id="skills" class="py-5 mt-5"></Skills>
   <Projects id="projects" class="py-5 mt-5"></Projects>

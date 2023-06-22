@@ -12,7 +12,6 @@ export default {
 
 <template>
     <section>
-        <br>
         <Navbar></Navbar>
 
         <figure class="container text-center">
