@@ -1,5 +1,5 @@
 <script>
-import { store } from '../store';
+//import { store } from '../store';
 
 import AboutMe from './components/AboutMe.vue';
 import Contacts from './components/Contacts.vue';
@@ -24,10 +24,9 @@ export default {
 </script>
 
 <template>
-  <h1 class="p-5 text-center">WORK IN PROGRESS...</h1>
+  <h1 class="py-5 mt-5 text-center">WORK IN PROGRESS...</h1>
 
   <JumboTron></JumboTron>
-  <Skills></Skills>
 </template>
 
 <style></style>

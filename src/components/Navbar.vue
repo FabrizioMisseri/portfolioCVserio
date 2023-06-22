@@ -8,17 +8,25 @@ window.addEventListener('scroll', function () {
     }
 });
 
+import { store } from '../../store';
+
 export default {
     name: 'NavBar',
+
+    data() {
+        return {
+            store,
+        }
+    },
 }
 </script>
 
 <template>
     <nav class="mb-5">
         <ul class="container fs-3 d-flex justify-content-between">
-            <li v-for="n in 8">
-                <a :href="`#${n}`">
-                    {{ n }}
+            <li v-for="(item, index) in store.navbarList" :key="index">
+                <a :href="`#${item.link}`">
+                    {{ item.name }}
                 </a>
             </li>
         </ul>
