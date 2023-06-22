@@ -16,7 +16,7 @@ export default {
         <Navbar></Navbar>
 
         <figure class="container text-center">
-            <img src="../../public/Fabrizio Misseri.png" alt="">
+            <img src="../../public/FabrizioMisseri.png" alt="">
         </figure>
 
     </section>
