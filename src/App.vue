@@ -24,8 +24,6 @@ export default {
 </script>
 
 <template>
-  <h1 class="py-5 mt-5 text-center">WORK IN PROGRESS...</h1>
-
   <JumboTron id="jumbo" class="py-5 mt-5"></JumboTron>
   <AboutMe id="about" class="py-5 mt-5"></AboutMe>
   <Skills id="skills" class="py-5 mt-5"></Skills>
