@@ -22,14 +22,43 @@ export default {
 </script>
 
 <template>
-    <nav class="mb-5">
-        <ul class="container fs-4 d-flex justify-content-between">
-            <li v-for="(item, index) in store.navbarList" :key="index">
-                <a :href="`#${item.link}`">
-                    {{ item.name }}
+    <nav class="mb-5 container-fluid">
+        <div class="row d-flex">
+
+            <div class="col-3 text-start fs-4 phantom">
+                <a href="#">
+                    <span class="me-2">FABRIZIO</span>
+                    <span style="color: rgb(253, 60, 26);">MISSERI</span>
                 </a>
-            </li>
-        </ul>
+            </div>
+
+            <div class="col-6 pt-1">
+                <ul class="container d-flex justify-content-between">
+                    <li v-for="(item, index) in store.navbarList" :key="index">
+                        <a :href="`#${item.link}`" class="fs-5">
+                            {{ item.name }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-3 text-end fs-3 phantom">
+                <a class="me-3" href="https://www.linkedin.com/in/fabrizio-misseri/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a class="me-3" href="https://github.com/FabrizioMisseri">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a href="https://fabrizio-misseri-links.netlify.app/">
+                    <i class="fa-solid fa-square-up-right"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+
+
     </nav>
 </template>
 
@@ -47,15 +76,19 @@ nav {
     //
     transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
+    a {
+        color: inherit;
+    }
+
     //
     &.scrolled {
         background-color: #c0c0c0;
-        opacity: 0.7;
         border-bottom: 0 transparent;
         display: inline-block;
         height: 30px;
 
-        li {
+        li,
+        .phantom {
             a {
                 display: none;
             }
@@ -65,10 +98,11 @@ nav {
             animation: scroll-down .3s linear;
             height: 45px;
 
-            li {
+            li,
+            .phantom {
                 a {
                     display: inline-block;
-                    color: red;
+                    color: $red;
                 }
             }
         }
