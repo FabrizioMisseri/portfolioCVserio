@@ -23,7 +23,7 @@ export default {
 
 <template>
     <nav class="mb-5">
-        <ul class="container fs-3 d-flex justify-content-between">
+        <ul class="container fs-4 d-flex justify-content-between">
             <li v-for="(item, index) in store.navbarList" :key="index">
                 <a :href="`#${item.link}`">
                     {{ item.name }}
@@ -42,8 +42,8 @@ nav {
     left: 0;
     width: 100%;
     z-index: 999;
-    //background-color: white;
-    border-bottom: 1px solid $orange;
+    // debug
+    border-bottom: 3px solid $orange;
     //
     transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
@@ -63,7 +63,7 @@ nav {
 
         &:hover {
             animation: scroll-down .3s linear;
-            height: 60px;
+            height: 45px;
 
             li {
                 a {
@@ -90,11 +90,11 @@ nav {
     }
 
     33% {
-        height: 45px;
+        height: 38px;
     }
 
     100% {
-        height: 60px;
+        height: 45px;
     }
 }
 </style>

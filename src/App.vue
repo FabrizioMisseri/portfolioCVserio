@@ -26,7 +26,11 @@ export default {
 <template>
   <h1 class="py-5 mt-5 text-center">WORK IN PROGRESS...</h1>
 
-  <JumboTron></JumboTron>
+  <JumboTron id="jumbo" class="py-5 mt-5"></JumboTron>
+  <AboutMe id="about" class="py-5 mt-5"></AboutMe>
+  <Skills id="skills" class="py-5 mt-5"></Skills>
+  <Projects id="projects" class="py-5 mt-5"></Projects>
+  <Contacts id="contacts" class="py-5 mt-5"></Contacts>
 </template>
 
 <style></style>
