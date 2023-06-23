@@ -5,7 +5,7 @@ export const store = reactive({
     navbarList: [
         {
             name: "Home",
-            link: "jumbo"
+            link: ""
         },
         {
             name: "About-me",

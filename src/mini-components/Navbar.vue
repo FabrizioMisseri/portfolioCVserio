@@ -28,7 +28,7 @@ export default {
             <div class="col-6 text-start fs-4 phantom">
                 <a href="#">
                     <span class="me-2">FABRIZIO</span>
-                    <span style="color: rgb(253, 60, 26);">MISSERI</span>
+                    <span id="misse">MISSERI</span>
                 </a>
             </div>
 
@@ -120,5 +120,9 @@ nav {
     100% {
         height: 45px;
     }
+}
+
+#misse {
+    color: $red;
 }
 </style>
