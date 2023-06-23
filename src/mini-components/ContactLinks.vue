@@ -36,7 +36,7 @@ export default {
             </li>
 
             <li>
-                <a class="px-5 py-2 rounded-4" href="../../public/CV.pdf" download="CV">
+                <a class="px-5 py-2 rounded-4" href="../../public/CV.zip" download="CV">
                     <i class="fa-solid fa-file-pdf"></i>
                     <span class="ms-3">Curriculum</span>
                 </a>
