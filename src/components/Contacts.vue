@@ -1,11 +1,13 @@
 <script>
 import ContactLinks from '../mini-components/ContactLinks.vue';
+import FormMail from '../mini-components/FormMail.vue';
 
 export default {
     name: "Contacts",
 
     components: {
-        ContactLinks
+        ContactLinks,
+        FormMail,
     }
 }
 </script>
@@ -13,7 +15,8 @@ export default {
 <template>
     <section>
         <br>
-        <ContactLinks></ContactLinks>
+        <ContactLinks class="mb-5"></ContactLinks>
+        <FormMail></FormMail>
     </section>
 </template>
 
