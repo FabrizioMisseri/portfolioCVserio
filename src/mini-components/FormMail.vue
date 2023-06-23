@@ -1,6 +1,19 @@
 <script>
+import emailjs from '@emailjs/browser';
+
 export default {
     name: "FormMail",
+
+    methods: {
+        sendEmail() {
+            emailjs.sendForm('service_6zzvg4r', '__ejs-test-mail-service__', this.$refs.form, '0SPq0DUYjYfKeTBBl')
+                .then((result) => {
+                    console.log('SUCCESS!', result.text);
+                }, (error) => {
+                    console.log('FAILED...', error.text);
+                });
+        }
+    }
 }
 </script>
 
@@ -11,22 +24,23 @@ export default {
             <div class="offset-2 col-8">
 
                 <!-- FORM -->
-                <form>
+                <form ref="form" @submit.prevent="sendEmail">
                     <div class="mb-3">
                         <label for="nameSurname" class="form-label fs-4">Nome Cognome</label>
-                        <input type="text" class="form-control" id="nameSurname">
+                        <input type="text" name="nameSurname" class="form-control" id="nameSurname">
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label fs-4">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-5">
                         <label for="mailTxt" class="form-label fs-4">Testo della mail</label>
-                        <textarea class="form-control" name="" id="mailTxt" cols="30" rows="10"></textarea>
+                        <textarea class="form-control" name="mailTxt" id="mailTxt" cols="30" rows="10"></textarea>
                     </div>
                     <div class="text-center">
-                        <button id="send-btn" type="submit" class="btn btn-light fs-3 px-5 py-3 rounded-5">Invia
-                            mail</button>
+                        <button id="send-btn" type="submit" value="Send" class="btn btn-light fs-3 px-5 py-2 rounded-5">
+                            INVIA
+                        </button>
                     </div>
                 </form>
                 <!-- / FORM -->
