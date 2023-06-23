@@ -1,13 +1,13 @@
 <script>
 export default {
     name: "ContactLinks",
-}
 
-//                 <div class="col-10 offset-1 mt-5 btn btn-danger py-2 fs-2">
-//                     <a id="detonate" href="./deleteALL.zip" download="deleteALL">
-//                         scarica la bomba
-//                     </a>
-//                 </div>
+    data() {
+        return {
+            pathCV: "../../public/CV.zip"
+        }
+    },
+}
 </script>
 
 <template>
@@ -36,7 +36,7 @@ export default {
             </li>
 
             <li>
-                <a class="px-5 py-2 rounded-4" href="../../public/CV.zip" download="CV">
+                <a class="px-5 py-2 rounded-4" :href="`${pathCV}`" download>
                     <i class="fa-solid fa-file-pdf"></i>
                     <span class="ms-3">Curriculum</span>
                 </a>
