@@ -23,9 +23,9 @@ export default {
 
 <template>
     <nav class="mb-5 container-fluid">
-        <div class="row d-flex">
+        <div class="row d-flex px-5">
 
-            <div class="col-3 text-start fs-4 phantom">
+            <div class="col-6 text-start fs-4 phantom">
                 <a href="#">
                     <span class="me-2">FABRIZIO</span>
                     <span style="color: rgb(253, 60, 26);">MISSERI</span>
@@ -42,17 +42,7 @@ export default {
                 </ul>
             </div>
 
-            <div class="col-3 text-end fs-3 phantom">
-                <a class="me-3" href="https://www.linkedin.com/in/fabrizio-misseri/">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a class="me-3" href="https://github.com/FabrizioMisseri">
-                    <i class="fa-brands fa-square-github"></i>
-                </a>
-                <a href="https://fabrizio-misseri-links.netlify.app/">
-                    <i class="fa-solid fa-square-up-right"></i>
-                </a>
-            </div>
+
 
         </div>
 

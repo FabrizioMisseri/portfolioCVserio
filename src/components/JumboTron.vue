@@ -1,5 +1,5 @@
 <script>
-import Navbar from './Navbar.vue';
+import Navbar from '../mini-components/Navbar.vue';
 
 export default {
     name: "JumboTron",
