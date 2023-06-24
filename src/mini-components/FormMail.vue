@@ -6,7 +6,7 @@ export default {
 
     methods: {
         sendEmail() {
-            emailjs.sendForm('service_6zzvg4r', '__ejs-test-mail-service__', this.$refs.form, '0SPq0DUYjYfKeTBBl')
+            emailjs.sendForm('service_6zzvg4r', 'template_vh66j1e', this.$refs.form, '0SPq0DUYjYfKeTBBl')
                 .then((result) => {
                     console.log('SUCCESS!', result.text);
                 }, (error) => {
@@ -38,9 +38,7 @@ export default {
                         <textarea class="form-control" name="mailTxt" id="mailTxt" cols="30" rows="10"></textarea>
                     </div>
                     <div class="text-center">
-                        <button id="send-btn" type="submit" value="Send" class="btn btn-light fs-3 px-5 py-2 rounded-5">
-                            INVIA
-                        </button>
+                        <input id="send-btn" type="submit" value="INVIA" class="btn btn-light fs-3 px-5 py-2 rounded-5">
                     </div>
                 </form>
                 <!-- / FORM -->
