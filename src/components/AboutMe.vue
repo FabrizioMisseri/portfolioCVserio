@@ -7,7 +7,7 @@ export default {
 <template>
     <section class="container">
         <br>
-        <article class="fs-5">
+        <article class="fs-5 rounded-4 px-5 py-3">
             Sono una persona motivata, determinata e con una grande voglia di apprendere. Fin da giovane, sono stato
             affascinato dal mondo della programmazione ed ho trovato nell'ambiente di sviluppo del codice il luogo perfetto
             dove appagare la mia sete di conoscenza e curiosità.
@@ -18,4 +18,10 @@ export default {
     </section>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use "../styles/partials/colors.scss" as *;
+
+article {
+    border: 4px solid $orange;
+}
+</style>
