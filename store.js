@@ -28,47 +28,47 @@ export const store = reactive({
     logosArray: [
         {
             title: 'HTML',
-            logoPath: 'public/logos/logo-html.png',
+            logoPath: '/public/logos/logo-html.png',
         },
         {
             title: 'BootStrap',
-            logoPath: 'public/logos/logo-bootstrap.png',
+            logoPath: '/public/logos/logo-bootstrap.png',
         },
         {
             title: 'JavaScript',
-            logoPath: 'public/logos/logo-javascript.png',
+            logoPath: '/public/logos/logo-javascript.png',
         },
         {
             title: 'VueJS',
-            logoPath: 'public/logos/logo-vue.png',
+            logoPath: '/public/logos/logo-vue.png',
         },
         {
             title: 'NPM',
-            logoPath: 'public/logos/logo-npm.png',
+            logoPath: '/public/logos/logo-npm.png',
         },
         {
             title: 'MySQL',
-            logoPath: 'public/logos/logo-mysql.png',
+            logoPath: '/public/logos/logo-mysql.png',
         },
         {
             title: 'PHP',
-            logoPath: 'public/logos/logo-php.png',
+            logoPath: '/public/logos/logo-php.png',
         },
         {
             title: 'Laravel',
-            logoPath: 'public/logos/logo-laravel.png',
+            logoPath: '/public/logos/logo-laravel.png',
         },
         {
             title: 'Java',
-            logoPath: 'public/logos/logo-java.png',
+            logoPath: '/public/logos/logo-java.png',
         },
         {
             title: 'Spring',
-            logoPath: 'public/logos/logo-spring.png',
+            logoPath: '/public/logos/logo-spring.png',
         },
         {
             title: 'CSS',
-            logoPath: 'public/logos/logo-css.png',
+            logoPath: '/public/logos/logo-css.png',
         },
     ],
 
