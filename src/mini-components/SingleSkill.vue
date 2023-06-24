@@ -26,7 +26,7 @@ export default {
     <div class="item p-5 d-flex justify-content-center">
         <figure class="scroll-container">
             <img :src="getImage(skill.logoPath)" alt="">
-            <div class="title fs-4 scroll-content">
+            <div class="title fs-4 scroll-content rounded-4 px-4 py-2">
                 {{ skill.title }}
             </div>
         </figure>
@@ -53,6 +53,8 @@ export default {
             z-index: 1;
             top: 45%;
             left: 150px;
+            color: white;
+            background-color: $orange;
         }
     }
 
@@ -72,14 +74,19 @@ export default {
     @keyframes scroll-right {
         0% {
             transform: translateX(-100%);
+            color: $body;
+            background-color: $body;
+            filter: opacity(1);
         }
 
         33% {
             transform: translateX(-50%);
+            filter: opacity(.66);
         }
 
         100% {
             transform: translateX(0%);
+            filter: opacity(0);
         }
     }
 }
