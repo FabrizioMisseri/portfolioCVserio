@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-    <section class="comtainer">
+    <section class="container">
 
         <div class="row">
             <div class="offset-2 col-8">
