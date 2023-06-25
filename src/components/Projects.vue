@@ -76,15 +76,13 @@ export default {
 section {
 
     .swiper-pagination-bullet-active {
-        background-color: $orange;
+        background-color: $red;
     }
 
     .swiper-button-next::after,
     .swiper-button-prev::after {
-        font-size: 1.5rem;
-        color: white;
-        font-weight: 600;
-        background-color: $orange;
+        color: $red;
+        font-weight: 700;
     }
 
 }
