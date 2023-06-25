@@ -87,4 +87,27 @@ export const store = reactive({
         "/img/strongpasswordgenerator-2.png",
     ],
 
+    mediaList: [
+        {
+            name: "boolking",
+            link: "",
+        },
+        {
+            name: "fotoalbum",
+            link: "",
+        },
+        {
+            name: "whatsapp",
+            link: "",
+        },
+        {
+            name: "pizzeria",
+            link: "",
+        },
+        {
+            name: "strong password generator",
+            link: "",
+        },
+    ],
+
 });

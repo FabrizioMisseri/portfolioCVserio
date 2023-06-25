@@ -38,12 +38,17 @@ export default {
         return {
             showProjectFlag: false,
             store,
+            selectedValue: "",
         }
     },
 
     methods: {
         getImage(path) {
             return new URL(path, import.meta.url).href;
+        },
+
+        goTo(path) {
+            window.location.href = `${path}`;
         },
     }
 }
@@ -52,8 +57,35 @@ export default {
 <template>
     <section class="container">
 
+        <!-- title -->
+        <h2 class="text-center mb-4">
+            PROJECTS:
+        </h2>
+        <!-- / title -->
+
+        <!-- MEDIA-PLAYER -->
+        <form class="row fs-4 mb-4">
+            <div class="offset-3 col-6 row g-0">
+                <div class="col-4 text-center rounded-3" id="label">
+                    <span class="me-2">
+                        <i class="fa-solid fa-camera-retro"></i>
+                    </span>
+                    <span>projects</span>
+                </div>
+                <div class="col-8">
+                    <select v-model="selectedValue" name="" id="media" class="form-control" @change="goTo(selectedValue)">
+                        <option value="">scegli un progetto</option>
+                        <option v-for="(item, index) in store.mediaList" :value="item.link" :key="index">
+                            {{ item.name }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <!-- / MEDIA-PLAYER -->
+
+        <!-- SLIDER -->
         <div class="content-box">
-            <!-- SLIDER -->
             <swiper class="m-4" :modules="modules" :slides-per-view="1" :space-between="0" navigation
                 :pagination="{ clickable: true }" @swiper="onSwiper" @slideChange="onSlideChange" loop="true">
 
@@ -65,8 +97,8 @@ export default {
                 <!-- / all photos -->
 
             </swiper>
-            <!-- / SLIDER -->
         </div>
+        <!-- / SLIDER -->
 
     </section>
 </template>
@@ -89,6 +121,11 @@ section {
     img {
         max-height: 80vh;
     }
+
+    #label {
+        background-color: $orange;
+    }
+
 
 }
 </style>

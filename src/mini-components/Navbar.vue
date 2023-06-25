@@ -105,6 +105,7 @@ nav {
 
     i {
         color: $red;
+        cursor: pointer;
     }
 
     a {
