@@ -90,23 +90,19 @@ export const store = reactive({
     mediaList: [
         {
             name: "boolking",
-            link: "",
+            link: "https://bespoke-biscochitos-0f0aea.netlify.app/",
         },
         {
             name: "fotoalbum",
-            link: "",
+            link: "https://remarkable-naiad-663a3a.netlify.app/",
         },
         {
             name: "whatsapp",
-            link: "",
+            link: "https://cerulean-longma-6930cc.netlify.app/",
         },
         {
             name: "pizzeria",
-            link: "",
-        },
-        {
-            name: "strong password generator",
-            link: "",
+            link: "https://darling-babka-a32fd2.netlify.app/",
         },
     ],
 
