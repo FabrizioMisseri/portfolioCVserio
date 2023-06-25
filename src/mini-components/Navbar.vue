@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-    <nav class="mb-5 container-fluid">
+    <nav class="mb-5">
         <div class="row d-flex px-5">
 
             <!-- NAME -->
@@ -184,6 +184,8 @@ nav {
             top: 0;
             right: 0;
             background-color: #c0c0c0;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
     }
 }

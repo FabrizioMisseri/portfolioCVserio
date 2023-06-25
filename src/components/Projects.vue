@@ -58,8 +58,9 @@ export default {
                 :pagination="{ clickable: true }" @swiper="onSwiper" @slideChange="onSlideChange" loop="true">
 
                 <!-- all photos -->
-                <swiper-slide class="slider" v-for="(photo, index) in store.sliderArray" :key="index">
-                    <img :src="getImage(photo)" alt="">
+                <swiper-slide class="slider d-flex justify-content-center" v-for="(photo, index) in store.sliderArray"
+                    :key="index">
+                    <img class="rounded-4" :src="getImage(photo)" alt="">
                 </swiper-slide>
                 <!-- / all photos -->
 
@@ -83,6 +84,10 @@ section {
     .swiper-button-prev::after {
         color: $red;
         font-weight: 700;
+    }
+
+    img {
+        max-height: 85vh;
     }
 
 }
