@@ -16,8 +16,15 @@ export default {
     data() {
         return {
             store,
+            showHideFlag: false,
         }
     },
+
+    methods: {
+        switchShowHideFlag() {
+            this.showHideFlag = !this.showHideFlag;
+        }
+    }
 }
 </script>
 
@@ -25,24 +32,51 @@ export default {
     <nav class="mb-5 container-fluid">
         <div class="row d-flex px-5">
 
+            <!-- NAME -->
             <div class="col-6 text-start fs-4 phantom">
                 <a href="#">
                     <span class="me-2">FABRIZIO</span>
                     <span id="misse">MISSERI</span>
                 </a>
             </div>
+            <!-- / NAME -->
 
-            <div class="col-6 pt-1">
-                <ul class="container d-flex justify-content-between">
-                    <li v-for="(item, index) in store.navbarList" :key="index">
-                        <a :href="`#${item.link}`" class="fs-5">
-                            {{ item.name }}
-                        </a>
-                    </li>
-                </ul>
+            <!-- link-list -->
+            <div class="col-6 pt-1 show">
+                <div>
+                    <ul class="container d-flex justify-content-between">
+                        <li v-for="(item, index) in store.navbarList" :key="index">
+                            <a :href="`#${item.link}`" class="fs-5">
+                                {{ item.name }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <!-- / link-list -->
 
+            <!-- hide-menu -->
+            <div class="col-6 pt-1 hide">
+                <!-- bars -->
+                <div class="text-end" v-if="!showHideFlag">
+                    <i class="fa-solid fa-bars fs-4" @click="switchShowHideFlag()"></i>
+                </div>
+                <!-- / bars -->
 
+                <div class="text-end" v-if="showHideFlag">
+                    <ul>
+                        <li class="text-end">
+                            <i class="fa-regular fa-circle-xmark fs-3 mb-3" @click="switchShowHideFlag()"></i>
+                        </li>
+                        <li v-for="(item, index) in store.navbarList" :key="index">
+                            <a :href="`#${item.link}`" class="fs-5">
+                                {{ item.name }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- hide-menu -->
 
         </div>
 
@@ -124,5 +158,19 @@ nav {
 
 #misse {
     color: $red;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 930px) {
+    .show {
+        display: none;
+    }
+
+    .hide {
+        display: inline-block;
+    }
 }
 </style>
