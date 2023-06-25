@@ -35,8 +35,8 @@ export default {
             <!-- NAME -->
             <div class="col-6 text-start fs-4 phantom">
                 <a href="#">
-                    <span class="me-2">FABRIZIO</span>
-                    <span id="misse">MISSERI</span>
+                    <span id="misse" class="me-2">FABRIZIO</span>
+                    <span>MISSERI</span>
                 </a>
             </div>
             <!-- / NAME -->
@@ -59,14 +59,15 @@ export default {
             <div class="col-6 pt-1 hide">
                 <!-- bars -->
                 <div class="text-end" v-if="!showHideFlag">
-                    <i class="fa-solid fa-bars fs-4" @click="switchShowHideFlag()"></i>
+                    <i class="pt-1 fa-solid fa-bars fs-4" @click="switchShowHideFlag()"></i>
                 </div>
                 <!-- / bars -->
 
-                <div class="text-end" v-if="showHideFlag">
+                <!-- list -->
+                <div class="list py-2 px-4" v-if="showHideFlag">
                     <ul>
                         <li class="text-end">
-                            <i class="fa-regular fa-circle-xmark fs-3 mb-3" @click="switchShowHideFlag()"></i>
+                            <i class="fa-regular fa-circle-xmark fs-2 mb-3" @click="switchShowHideFlag()"></i>
                         </li>
                         <li v-for="(item, index) in store.navbarList" :key="index">
                             <a :href="`#${item.link}`" class="fs-5">
@@ -75,6 +76,8 @@ export default {
                         </li>
                     </ul>
                 </div>
+                <!-- / list -->
+
             </div>
             <!-- hide-menu -->
 
@@ -99,6 +102,10 @@ nav {
     border-bottom: 3px solid $orange;
     //
     transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    i {
+        color: $red;
+    }
 
     a {
         color: inherit;
@@ -171,6 +178,13 @@ nav {
 
     .hide {
         display: inline-block;
+
+        .list {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #c0c0c0;
+        }
     }
 }
 </style>
