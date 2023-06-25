@@ -1,28 +1,91 @@
 <script>
-import SingleProject from '../mini-components/SingleProject.vue';
+// import slider
+import { store } from '../../store';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import { Pagination, Navigation } from 'swiper';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// -------------
 
 export default {
+
+    // setup slider
+    setup() {
+        const onSwiper = (swiper) => {
+            console.log(swiper);
+        };
+        const onSlideChange = () => {
+            console.log('slide change');
+        };
+        return {
+            onSwiper,
+            onSlideChange,
+            modules: [Pagination, Navigation],
+        };
+    },
+    // -------------
 
     name: 'Projects',
 
     components: {
-        SingleProject,
+        Swiper,
+        SwiperSlide,
     },
 
+    data() {
+        return {
+            showProjectFlag: false,
+            store,
+        }
+    },
 
+    methods: {
+        getImage(path) {
+            return new URL(path, import.meta.url).href;
+        },
+    }
 }
 </script>
 
 <template>
-    <br>
-
-    <!-- body wrapper -->
     <section class="container">
 
-        <SingleProject></SingleProject>
+        <div class="content-box">
+            <!-- SLIDER -->
+            <swiper class="m-4" :modules="modules" :slides-per-view="1" :space-between="0" navigation
+                :pagination="{ clickable: true }" @swiper="onSwiper" @slideChange="onSlideChange" loop="true">
+
+                <!-- all photos -->
+                <swiper-slide class="slider" v-for="(photo, index) in store.sliderArray" :key="index">
+                    <img :src="getImage(photo)" alt="">
+                </swiper-slide>
+                <!-- / all photos -->
+
+            </swiper>
+            <!-- / SLIDER -->
+        </div>
 
     </section>
-    <!-- / body wrapper -->
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+@use "../styles/partials/colors.scss" as *;
+
+section {
+
+    .swiper-pagination-bullet-active {
+        background-color: $orange;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 1.5rem;
+        color: white;
+        font-weight: 600;
+        background-color: $orange;
+    }
+
+}
+</style>
