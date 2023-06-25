@@ -17,7 +17,7 @@ export const store = reactive({
         },
         {
             name: "Projects",
-            link: "projects"
+            link: "proj"
         },
         {
             name: "Contacts",
