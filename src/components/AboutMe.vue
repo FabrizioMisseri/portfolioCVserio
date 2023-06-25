@@ -13,7 +13,7 @@ export default {
             dove appagare la mia sete di conoscenza e curiosità.
             Questo mondo stimolante ed in costante evoluzione mi consente di dare libero sfogo alla mia creatività e mettere
             alla prova le mie competenze tecniche. In tal modo, sono in grado di raggiungere il risultato finale e superare
-            le difficoltà tecnologica che mi si pongono davanti.
+            le difficoltà tecnologiche che mi si pongono davanti.
         </article>
     </section>
 </template>

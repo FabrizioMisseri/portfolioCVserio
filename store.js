@@ -72,4 +72,19 @@ export const store = reactive({
         },
     ],
 
+    sliderArray: [
+        "/img/boolking-1.png",
+        "/img/boolking-2.png",
+        "/img/boolking-3.png",
+        "/img/boolking-10.png",
+        "/img/fotoalbum-1.png",
+        "/img/fotoalbum-3.png",
+        "/img/pizzeria-3.png",
+        "/img/pizzeria-4.png",
+        "/img/whatsapp-1.png",
+        "/img/whatsapp-2.png",
+        "/img/strongpasswordgenerator-1.png",
+        "/img/strongpasswordgenerator-2.png",
+    ],
+
 });

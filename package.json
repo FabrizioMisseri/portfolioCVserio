@@ -12,6 +12,7 @@
     "@emailjs/browser": "^3.11.0",
     "bootstrap": "^5.3.0",
     "sass": "^1.63.5",
+    "swiper": "^9.4.1",
     "vue": "^3.2.47"
   },
   "devDependencies": {
