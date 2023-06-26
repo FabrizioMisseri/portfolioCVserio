@@ -7,6 +7,11 @@ export default {
             pathCV: "../../public/CV.zip"
         }
     },
+    methods: {
+        sendMail() {
+            window.open('mailto:misserifabrizio@gmail.com');
+        }
+    },
 }
 </script>
 
@@ -41,6 +46,12 @@ export default {
                     <span class="ms-3">Curriculum</span>
                 </a>
             </li>
+            <li>
+                <a class="px-5 py-2 rounded-4" @click="sendMail()">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="ms-3">misserifabrizio@gmail.com</span>
+                </a>
+            </li>
         </ul>
     </section>
     <!-- / LINKS -->
@@ -53,6 +64,7 @@ section {
 
     a:hover {
         background-color: $orange;
+        cursor: pointer;
     }
 }
 </style>

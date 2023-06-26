@@ -16,7 +16,7 @@ export default {
     <section>
         <br>
         <ContactLinks class="mb-5"></ContactLinks>
-        <FormMail></FormMail>
+        <!-- <FormMail></FormMail> -->
     </section>
 </template>
 
