@@ -17,42 +17,42 @@ export default {
 
 <template>
     <!-- LINKS -->
-    <section class="container d-flex justify-content-center fs-2">
-        <ul>
-            <li>
-                <a class="px-5 py-2 rounded-4" href="https://www.linkedin.com/in/fabrizio-misseri/">
+    <section class="container fs-2">
+        <div class="row d-flex justify-content-center">
+            <div class="col-7 rounded-4">
+                <a class="px-5 py-2" href="https://www.linkedin.com/in/fabrizio-misseri/">
                     <i class="fa-brands fa-linkedin"></i>
                     <span class="ms-3">Linkedin</span>
                 </a>
-            </li>
+            </div>
 
-            <li>
-                <a class="px-5 py-2 rounded-4" href="https://github.com/FabrizioMisseri">
+            <div class="col-7 rounded-4">
+                <a class="px-5 py-2" href="https://github.com/FabrizioMisseri">
                     <i class="fa-brands fa-square-github"></i>
                     <span class="ms-3">GitHub</span>
                 </a>
-            </li>
+            </div>
 
-            <li>
-                <a class="px-5 py-2 rounded-4" href="https://fabrizio-misseri-links.netlify.app/">
+            <div class="col-7 rounded-4">
+                <a class="px-5 py-2" href="https://fabrizio-misseri-links.netlify.app/">
                     <i class="fa-solid fa-square-up-right"></i>
                     <span class="ms-3">MyLinks</span>
                 </a>
-            </li>
+            </div>
 
-            <li>
-                <a class="px-5 py-2 rounded-4" :href="`${pathCV}`" download>
+            <div class="col-7 rounded-4">
+                <a class="px-5 py-2" :href="`${pathCV}`" download>
                     <i class="fa-solid fa-file-pdf"></i>
                     <span class="ms-3">Curriculum</span>
                 </a>
-            </li>
-            <li>
-                <a class="px-5 py-2 rounded-4" @click="sendMail()">
+            </div>
+            <div class="col-7 rounded-4">
+                <a class="px-5 py-2" @click="sendMail()">
                     <i class="fa-solid fa-envelope"></i>
                     <span class="ms-3">misserifabrizio@gmail.com</span>
                 </a>
-            </li>
-        </ul>
+            </div>
+        </div>
     </section>
     <!-- / LINKS -->
 </template>
@@ -62,7 +62,7 @@ export default {
 
 section {
 
-    a:hover {
+    .col-7:hover {
         background-color: $orange;
         cursor: pointer;
     }
