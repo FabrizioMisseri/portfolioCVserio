@@ -93,6 +93,7 @@ export default {
 @use "../styles/partials/colors.scss" as *;
 
 nav {
+    background-color: black;
     position: fixed;
     top: 0;
     left: 0;
@@ -114,8 +115,8 @@ nav {
 
     //
     &.scrolled {
-        background-color: #c0c0c0;
-        border-bottom: 0 transparent;
+        background-color: black;
+        border-bottom: 3px solid $orange;
         display: inline-block;
         height: 30px;
 
@@ -134,7 +135,6 @@ nav {
             .phantom {
                 a {
                     display: inline-block;
-                    color: $red;
                 }
             }
         }
@@ -160,7 +160,7 @@ nav {
     }
 
     100% {
-        height: 45px;
+        height: 48px;
     }
 }
 
@@ -173,20 +173,22 @@ nav {
 }
 
 @media screen and (max-width: 930px) {
-    .show {
-        display: none;
-    }
+    .scrolled:hover {
+        .show {
+            display: none;
+        }
 
-    .hide {
-        display: inline-block;
+        .hide {
+            display: inline-block;
 
-        .list {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-color: #c0c0c0;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
+            .list {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: black;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
         }
     }
 }
