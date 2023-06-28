@@ -4,7 +4,7 @@ export default {
 
     data() {
         return {
-            pathCV: "../../public/CV.pdf"
+            pathCV: "../../public/CV.zip"
         }
     },
     methods: {
