@@ -173,10 +173,21 @@ nav {
 }
 
 @media screen and (max-width: 930px) {
-    .scrolled:hover {
-        .show {
+    .show {
+        display: none;
+    }
+
+    .hide {
+        display: inline-block;
+    }
+
+    .scrolled {
+        .hide {
             display: none;
         }
+    }
+
+    .scrolled:hover {
 
         .hide {
             display: inline-block;
