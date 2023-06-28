@@ -4,7 +4,7 @@ export default {
 
     data() {
         return {
-            pathCV: "../../public/CV.zip"
+            pathCV: "/CV.pdf"
         }
     },
     methods: {
@@ -41,7 +41,7 @@ export default {
 
 
 
-            <a class="col-12 rounded-4 px-5 py-2" href="../../public/CV.zip" download="CV.zip">
+            <a class="col-12 rounded-4 px-5 py-2" :href="`${pathCV}`" download="download">
                 <i class="me-3 fa-solid fa-file-pdf"></i>
                 Curriculum
             </a>
