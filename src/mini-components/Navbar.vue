@@ -30,10 +30,10 @@ export default {
 
 <template>
     <nav class="mb-5">
-        <div class="row d-flex px-5">
+        <div class="row d-flex align-items-center px-5">
 
             <!-- NAME -->
-            <div class="col-6 text-start fs-4 phantom">
+            <div class="col-6 text-start fs-4 phantom" id="my_name">
                 <a href="#">
                     <span id="misse" class="me-2">FABRIZIO</span>
                     <span>MISSERI</span>
@@ -172,7 +172,7 @@ nav {
     display: none;
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 924px) {
     .show {
         display: none;
     }
