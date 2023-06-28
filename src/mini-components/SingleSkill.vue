@@ -51,8 +51,8 @@ export default {
             display: none;
             position: absolute;
             z-index: 1;
-            top: 45%;
-            left: 150px;
+            bottom: -40px;
+            left: 0;
             color: white;
             background-color: $orange;
         }
@@ -73,19 +73,19 @@ export default {
 
     @keyframes scroll-right {
         0% {
-            transform: translateX(-100%);
+            transform: translateY(-100%);
             color: $body;
             background-color: $body;
             filter: opacity(1);
         }
 
         33% {
-            transform: translateX(-50%);
+            transform: translateY(-50%);
             filter: opacity(.66);
         }
 
         100% {
-            transform: translateX(0%);
+            transform: translateY(0%);
             filter: opacity(0);
         }
     }

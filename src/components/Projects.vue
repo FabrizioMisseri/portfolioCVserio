@@ -70,7 +70,7 @@ export default {
                     <span class="me-2">
                         <i class="fa-solid fa-camera-retro"></i>
                     </span>
-                    <span>projects</span>
+                    <span id="my_projects">projects</span>
                 </div>
                 <div class="col-8">
                     <select v-model="selectedValue" name="" id="media" class="form-control" @change="goTo(selectedValue)">
@@ -126,6 +126,11 @@ section {
         background-color: $orange;
     }
 
+    @media screen and (max-width: 550px) {
+        #my_projects {
+            display: none;
+        }
+    }
 
 }
 </style>
