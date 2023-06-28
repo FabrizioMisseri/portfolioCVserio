@@ -9,6 +9,7 @@ export default {
             inputName: '',
             email: '',
             content: '',
+            mailSuccessFlag: false,
         }
     },
 
@@ -16,18 +17,26 @@ export default {
 
         // MAIL JS
         sendEmail() {
+            this.switchMailFlag();
             emailjs.sendForm('service_6zzvg4r', 'template_vh66j1e', this.$refs.form, '0SPq0DUYjYfKeTBBl')
                 .then((result) => {
                     console.log('SUCCESS!', result.text);
                     this.inputName = '';
                     this.email = '';
                     this.content = '';
+                    if (result.text == 'OK') {
+                        this.switchMailFlag();
+                    }
                 }, (error) => {
                     console.log('FAILED...', error.text);
                     alert(`${error.text}`);
                 });
-        }
+        },
         // MAIL JS
+
+        switchMailFlag() {
+            this.mailSuccessFlag = !this.mailSuccessFlag;
+        }
 
     }
 }
@@ -55,13 +64,21 @@ export default {
                         <textarea class="form-control" name="mailTxt" id="mailTxt" cols="30" rows="10"
                             v-model="content"></textarea>
                     </div>
-                    <div class="text-center">
+                    <div v-show="!mailSuccessFlag" class="text-center">
                         <input id="send-btn" type="submit" value="INVIA" class="btn btn-light fs-3 px-5 py-2 rounded-5">
                     </div>
                 </form>
                 <!-- / FORM -->
-
             </div>
+
+            <!-- loader -->
+            <div v-show="mailSuccessFlag" class="text-center">
+                <span class=" fs-3 px-5 py-3 rounded-5 loader">
+                    LOADING...
+                </span>
+            </div>
+            <!-- loader -->
+
         </div>
 
     </section>
@@ -74,5 +91,9 @@ export default {
     color: $orange;
     font-weight: 700;
     border: 3px solid $orange;
+}
+
+.loader {
+    background-color: $red;
 }
 </style>
