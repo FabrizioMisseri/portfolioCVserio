@@ -9,6 +9,7 @@ export default {
             inputName: '',
             email: '',
             content: '',
+            mailLoaderFlag: false,
             mailSuccessFlag: false,
         }
     },
@@ -17,7 +18,7 @@ export default {
 
         // MAIL JS
         sendEmail() {
-            this.switchMailFlag();
+            this.switchLoaderFlag();
             emailjs.sendForm('service_6zzvg4r', 'template_vh66j1e', this.$refs.form, '0SPq0DUYjYfKeTBBl')
                 .then((result) => {
                     console.log('SUCCESS!', result.text);
@@ -25,7 +26,11 @@ export default {
                     this.email = '';
                     this.content = '';
                     if (result.text == 'OK') {
-                        this.switchMailFlag();
+                        this.switchLoaderFlag();
+                        this.switchSuccessFlag();
+                        setTimeout(() => {
+                            this.switchSuccessFlag();
+                        }, 3000);
                     }
                 }, (error) => {
                     console.log('FAILED...', error.text);
@@ -34,9 +39,13 @@ export default {
         },
         // MAIL JS
 
-        switchMailFlag() {
+        switchLoaderFlag() {
+            this.mailLoaderFlag = !this.mailLoaderFlag;
+        },
+
+        switchSuccessFlag() {
             this.mailSuccessFlag = !this.mailSuccessFlag;
-        }
+        },
 
     }
 }
@@ -64,20 +73,32 @@ export default {
                         <textarea class="form-control" name="mailTxt" id="mailTxt" cols="30" rows="10"
                             v-model="content"></textarea>
                     </div>
-                    <div v-show="!mailSuccessFlag" class="text-center">
+                    <!-- BTN -->
+                    <div v-show="!mailLoaderFlag && !mailSuccessFlag" class="text-center btn-sender">
                         <input id="send-btn" type="submit" value="INVIA" class="btn btn-light fs-3 px-5 py-2 rounded-5">
                     </div>
+                    <!-- / BTN -->
+
+                    <!-- success -->
+                    <div v-show="mailSuccessFlag" class="text-center">
+                        <span class=" fs-3 px-5 py-3 rounded-5 success">
+                            MAIL INVIATA CON SUCCESSO
+                        </span>
+                    </div>
+                    <!-- / success -->
                 </form>
                 <!-- / FORM -->
             </div>
 
             <!-- loader -->
-            <div v-show="mailSuccessFlag" class="text-center">
+            <div v-show="mailLoaderFlag" class="text-center">
                 <span class=" fs-3 px-5 py-3 rounded-5 loader">
                     LOADING...
                 </span>
             </div>
-            <!-- loader -->
+            <!-- / loader -->
+
+
 
         </div>
 
@@ -94,6 +115,10 @@ export default {
 }
 
 .loader {
+    background-color: $red;
+}
+
+.success {
     background-color: $red;
 }
 </style>
