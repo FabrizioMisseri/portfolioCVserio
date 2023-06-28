@@ -4,15 +4,31 @@ import emailjs from '@emailjs/browser';
 export default {
     name: "FormMail",
 
+    data() {
+        return {
+            inputName: '',
+            email: '',
+            content: '',
+        }
+    },
+
     methods: {
+
+        // MAIL JS
         sendEmail() {
             emailjs.sendForm('service_6zzvg4r', 'template_vh66j1e', this.$refs.form, '0SPq0DUYjYfKeTBBl')
                 .then((result) => {
                     console.log('SUCCESS!', result.text);
+                    this.inputName = '';
+                    this.email = '';
+                    this.content = '';
                 }, (error) => {
                     console.log('FAILED...', error.text);
+                    alert(`${error.text}`);
                 });
         }
+        // MAIL JS
+
     }
 }
 </script>
@@ -23,19 +39,21 @@ export default {
         <div class="row">
             <div class="offset-2 col-8">
 
-                <!-- FORM -->
+                <!-- FORM ( MAIL JS )-->
                 <form ref="form" @submit.prevent="sendEmail">
                     <div class="mb-3">
                         <label for="nameSurname" class="form-label fs-4">Nome Cognome</label>
-                        <input type="text" name="nameSurname" class="form-control" id="nameSurname">
+                        <input type="text" name="nameSurname" class="form-control" id="nameSurname" v-model="inputName">
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label fs-4">Email address</label>
-                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
+                            v-model="email">
                     </div>
                     <div class="mb-5">
                         <label for="mailTxt" class="form-label fs-4">Testo della mail</label>
-                        <textarea class="form-control" name="mailTxt" id="mailTxt" cols="30" rows="10"></textarea>
+                        <textarea class="form-control" name="mailTxt" id="mailTxt" cols="30" rows="10"
+                            v-model="content"></textarea>
                     </div>
                     <div class="text-center">
                         <input id="send-btn" type="submit" value="INVIA" class="btn btn-light fs-3 px-5 py-2 rounded-5">

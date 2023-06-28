@@ -17,40 +17,40 @@ export default {
 
 <template>
     <!-- LINKS -->
-    <section class="container wrap fs-2">
-        <div class="row d-flex justify-content-center" id="media-screen">
+    <section class="container fs-2 mb-4">
+        <div class="row" id="media-screen">
 
-            <a class="col-12 rounded-4 px-5 py-2" href="https://www.linkedin.com/in/fabrizio-misseri/">
+            <a class="offset-2 col-8 rounded-4 py-2" href="https://www.linkedin.com/in/fabrizio-misseri/">
                 <i class="me-3 fa-brands fa-linkedin"></i>
                 Linkedin
             </a>
 
 
 
-            <a class="col-12 rounded-4 px-5 py-2" href="https://github.com/FabrizioMisseri">
+            <a class="offset-2 col-8 rounded-4 py-2" href="https://github.com/FabrizioMisseri">
                 <i class="me-3 fa-brands fa-square-github"></i>
                 GitHub
             </a>
 
 
 
-            <a class="col-12 rounded-4 px-5 py-2" href="https://fabrizio-misseri-links.netlify.app/">
+            <a class="offset-2 col-8 rounded-4 py-2" href="https://fabrizio-misseri-links.netlify.app/">
                 <i class="me-3 fa-solid fa-square-up-right"></i>
                 MyLinks
             </a>
 
 
 
-            <a class="col-12 rounded-4 px-5 py-2" :href="`${pathCV}`" download="download">
+            <a class="offset-2 col-8 rounded-4 py-2" :href="`${pathCV}`" download="download">
                 <i class="me-3 fa-solid fa-file-pdf"></i>
                 Curriculum
             </a>
 
 
-            <div class="col-12 rounded-4 px-5 py-2" @click="sendMail()">
+            <!-- <div class="col-12 rounded-4 px-5 py-2" @click="sendMail()">
                 <i class="me-3 fa-solid fa-envelope"></i>
                 misserifabrizio@gmail.com
-            </div>
+            </div> -->
 
         </div>
     </section>
@@ -60,12 +60,9 @@ export default {
 <style lang="scss" scoped>
 @use "../styles/partials/colors.scss" as *;
 
-section.wrap {
+section {
 
-    width: 90%;
-    margin: 0 auto;
-
-    .col-12:hover {
+    .col-8:hover {
         display: block;
         background-color: $orange;
         font-size: inherit;
