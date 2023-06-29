@@ -81,7 +81,7 @@ export default {
 
                     <!-- success -->
                     <div v-show="mailSuccessFlag" class="text-center">
-                        <span class=" fs-3 px-5 py-3 rounded-5 success">
+                        <span class=" fs-3 px-5 py-3 card text-white rounded-5 success">
                             MAIL INVIATA CON SUCCESSO
                         </span>
                     </div>
@@ -119,6 +119,6 @@ export default {
 }
 
 .success {
-    background-color: $red;
+    background-color: $green;
 }
 </style>
