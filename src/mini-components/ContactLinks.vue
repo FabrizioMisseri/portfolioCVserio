@@ -34,10 +34,10 @@ export default {
 
 
 
-            <a class="offset-2 col-8 rounded-4 py-2" href="https://fabrizio-misseri-links.netlify.app/">
+            <!-- <a class="offset-2 col-8 rounded-4 py-2" href="https://fabrizio-misseri-links.netlify.app/">
                 <i class="me-3 fa-solid fa-square-up-right"></i>
                 MyLinks
-            </a>
+            </a> -->
 
 
 
