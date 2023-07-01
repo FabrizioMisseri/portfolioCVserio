@@ -34,7 +34,7 @@ export default {
 
             <!-- NAME -->
             <div class="col-6 text-start fs-4 phantom" id="my_name">
-                <a href="#">
+                <a>
                     <span id="misse" class="me-2">FABRIZIO</span>
                     <span>MISSERI</span>
                 </a>
