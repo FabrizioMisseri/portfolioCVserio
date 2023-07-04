@@ -90,19 +90,19 @@ export const store = reactive({
     mediaList: [
         {
             name: "boolking",
-            link: "https://bespoke-biscochitos-0f0aea.netlify.app/",
+            link: "https://vocal-kataifi-8dcaed.netlify.app",
         },
         {
             name: "fotoalbum",
-            link: "https://remarkable-naiad-663a3a.netlify.app/",
+            link: "https://heroic-kringle-6ecf0d.netlify.app",
         },
         {
             name: "whatsapp",
-            link: "https://cerulean-longma-6930cc.netlify.app/",
+            link: "https://genuine-valkyrie-8091fb.netlify.app",
         },
         {
             name: "pizzeria",
-            link: "https://darling-babka-a32fd2.netlify.app/",
+            link: "https://fancy-moxie-fa4628.netlify.app",
         },
     ],
 
