@@ -18,24 +18,32 @@ export default {
 
         // MAIL JS
         sendEmail() {
-            this.switchLoaderFlag();
-            emailjs.sendForm('service_6zzvg4r', 'template_vh66j1e', this.$refs.form, '0SPq0DUYjYfKeTBBl')
-                .then((result) => {
-                    console.log('SUCCESS!', result.text);
-                    this.inputName = '';
-                    this.email = '';
-                    this.content = '';
-                    if (result.text == 'OK') {
-                        this.switchLoaderFlag();
-                        this.switchSuccessFlag();
-                        setTimeout(() => {
+            if (this.email !== "" && this.inputName !== "" && this.content !== "") {
+                this.switchLoaderFlag();
+                emailjs.sendForm('service_6zzvg4r', 'template_vh66j1e', this.$refs.form, '0SPq0DUYjYfKeTBBl')
+                    .then((result) => {
+                        console.log('SUCCESS!', result.text);
+                        this.inputName = '';
+                        this.email = '';
+                        this.content = '';
+                        if (result.text == 'OK') {
+                            this.switchLoaderFlag();
                             this.switchSuccessFlag();
-                        }, 3000);
-                    }
-                }, (error) => {
-                    console.log('FAILED...', error.text);
-                    alert(`${error.text}`);
-                });
+                            setTimeout(() => {
+                                this.switchSuccessFlag();
+                            }, 3000);
+                        }
+                    }, (error) => {
+                        console.log('FAILED...', error.text);
+                        alert(`${error.text}`);
+                    });
+            } else if (this.email === "") {
+                alert("Non hai inserito un indirizzo mail");
+            } else if (this.inputName === "") {
+                alert("Non hai inserito un nome");
+            } else if (this.content === "") {
+                alert("Non hai inserito nessun testo");
+            }
         },
         // MAIL JS
 
