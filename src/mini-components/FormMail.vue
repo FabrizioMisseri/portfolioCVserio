@@ -18,7 +18,7 @@ export default {
 
         // MAIL JS
         sendEmail() {
-            if (this.email !== "" && this.inputName !== "" && this.content !== "") {
+            if (this.email.trim() !== "" && this.inputName.trim() !== "" && this.content.trim() !== "") {
                 this.switchLoaderFlag();
                 emailjs.sendForm('service_6zzvg4r', 'template_vh66j1e', this.$refs.form, '0SPq0DUYjYfKeTBBl')
                     .then((result) => {
@@ -37,11 +37,11 @@ export default {
                         console.log('FAILED...', error.text);
                         alert(`${error.text}`);
                     });
-            } else if (this.email === "") {
+            } else if (this.email.trim() === "") {
                 alert("Non hai inserito un indirizzo mail");
-            } else if (this.inputName === "") {
+            } else if (this.inputName.trim() === "") {
                 alert("Non hai inserito un nome");
-            } else if (this.content === "") {
+            } else if (this.content.trim() === "") {
                 alert("Non hai inserito nessun testo");
             }
         },
